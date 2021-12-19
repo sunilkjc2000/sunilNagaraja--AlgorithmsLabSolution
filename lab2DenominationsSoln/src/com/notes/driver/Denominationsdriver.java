@@ -27,7 +27,12 @@ public class Denominationsdriver {
 		
 		System.out.println("Your payment approach in order to give min no of notes will be");
 		
-		denominations.paymentDenominations();
+		// Handle invalid inputs
+		try {
+		    denominations.paymentDenominations();
+		}catch(ArithmeticException e){
+	         System.out.println ("Zero denomination value entered");
+	     }
 			
      }
 
